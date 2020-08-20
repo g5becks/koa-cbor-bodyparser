@@ -136,7 +136,6 @@ var __importDefault =
         return mod && mod.__esModule ? mod : { default: mod }
     }
 Object.defineProperty(exports, '__esModule', { value: true })
-exports.cborBodyParser = void 0
 var cbor_1 = require('cbor')
 var raw_body_1 = __importDefault(require('raw-body'))
 var content_type_1 = __importDefault(require('content-type'))
@@ -154,7 +153,7 @@ var defaultOpts = {
  * @param {CborBodyParserOptions} opts
  * @returns {Koa.Middleware}
  */
-exports.cborBodyParser = function (opts) {
+exports.default = function (opts) {
     if (opts === void 0) {
         opts = defaultOpts
     }

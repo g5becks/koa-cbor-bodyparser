@@ -1,5 +1,5 @@
 import { decodeAll, DecoderOptions } from 'cbor'
-import Koa from 'koa'
+import * as Koa from 'koa'
 import getRawBody from 'raw-body'
 import contentType from 'content-type'
 
@@ -28,7 +28,7 @@ const defaultOpts: CborBodyParserOptions = {
  * @param {CborBodyParserOptions} opts
  * @returns {Koa.Middleware}
  */
-export const cborBodyParser = (opts: CborBodyParserOptions = defaultOpts): Koa.Middleware => {
+export default (opts: CborBodyParserOptions = defaultOpts): Koa.Middleware => {
     return async (ctx, next) => {
         if (ctx.request.type === 'application/cbor') {
             ctx.disableBodyParser = true
