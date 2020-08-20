@@ -1,6 +1,6 @@
 {
   "name": "koa-cbor-bodyparser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cbor body parser middleware for Koa using node-cbor",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
